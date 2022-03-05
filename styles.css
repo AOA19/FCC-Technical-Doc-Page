@@ -1,0 +1,344 @@
+:root {
+  /* Fonts */
+  --ff-header: "Bodoni Moda", serif; /* Font weights: 400 500 600 800 */
+  --ff-primary: "Pavanam", sans-serif; /* Font weight: 400 */
+  /* Colors */
+  --primary-header-color: #344966;
+  --primary-text-color: #30323d;
+  --code-block-color: #dcedb9;
+  --inline-code-color: #d4d2d5;
+  --primary-nav-color: #9dc3c2;
+  --nav-highlight-color: #96b4b3;
+  --code-wrapper-background: #96adc8;
+  --code-result-background: #acd8f0;
+  --code-result-border: #397367;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+/* Heading Styling */
+header {
+  color: var(--primary-header-color);
+  font-family: var(--ff-header);
+  font-size: 1.875rem;
+  font-weight: 800;
+  padding: 10px 0;
+  text-transform: capitalize;
+}
+nav header {
+  margin-top: 35px;
+  padding-left: 10px;
+}
+
+h3 {
+  color: var(--primary-header-color);
+  font-family: var(--ff-header);
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 10px 0;
+  text-transform: capitalize;
+}
+
+/* Paragraph Styling */
+p {
+  color: var(--primary-text-color);
+  font-family: var(--ff-primary);
+  font-size: 1.25rem;
+  padding: 8px 0 8px 20px;
+  line-height: 1.5;
+}
+
+/* Image Styling */
+img {
+  max-width: 100%;
+  padding: 25px 0;
+}
+
+/* Styling for the z-index text in the only span element */
+span {
+  text-transform: lowercase;
+}
+
+/********************** Navigation Bar Styling *********************/
+#navbar {
+  background-color: var(--primary-nav-color);
+  height: 100%;
+  left: 0;
+  min-width: 310px;
+  overflow-y: scroll;
+  position: fixed;
+  text-align: center;
+  top: 0;
+}
+
+#navbar ul {
+  padding-top: 20px;
+}
+
+#navbar ul li {
+  list-style: none;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-top: 1px solid var(--nav-highlight-color);
+}
+
+#navbar ul li:hover {
+  background-color: var(--nav-highlight-color);
+  cursor: pointer;
+}
+
+.nav-link {
+  color: var(--primary-text-color);
+  display: block;
+  font-family: var(--ff-primary);
+  font-size: 1.25rem;
+  text-transform: capitalize;
+}
+
+/*********************** Main Section Styling ************************/
+#main-doc {
+  position: absolute;
+  margin-left: 340px;
+  padding: 30px;
+}
+
+/*********************** Basic Concepts Styling ********************/
+.grid-layout {
+  color: var(--nav-highlight-color);
+}
+
+.grid-layout:hover {
+  text-decoration: underline;
+}
+
+/*********************** What is a grid Styling ********************/
+ol {
+  line-height: 1.75;
+  padding: 20px 0 20px 90px;
+}
+
+ol li {
+  color: var(--primary-text-color);
+  font-family: var(--ff-primary);
+  font-size: 1.25rem;
+}
+
+/* Styling for inline code */
+.inline-code {
+  background-color: var(--inline-code-color);
+  font-size: 1rem;
+  padding: 5px;
+}
+
+/*********************** Grid Container Styling ********************/
+pre {
+  background-color: var(--code-block-color);
+  border-radius: 5px;
+  display: block;
+  margin: 30px 90px;
+  text-align: center;
+  white-space: pre-line;
+}
+
+code {
+  color: var(--primary-text-color);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+/*********************** Coding example result styling ********************/
+
+.wrapper {
+  background-color: var(--code-wrapper-background);
+  border: 2px solid var(--code-result-border);
+  border-radius: 5px;
+  color: var(--code-result-border);
+  margin-bottom: 20px;
+}
+
+.wrapper > div {
+  background-color: var(--code-result-background);
+  border: 2px solid var(--code-result-border);
+  border-radius: 5px;
+  padding: 1em;
+}
+
+/* Code Example 1 */
+.code-ex1 {
+  display: grid;
+}
+
+/* Code Example 2 */
+.code-ex2 {
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+}
+
+/* Code Example 3 */
+.code-ex3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* Code Example 4 */
+.code-ex4 {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+}
+
+/* Code Example 5 */
+.code-ex5 {
+  display: grid;
+  grid-template-columns: 500px 1fr 2fr;
+}
+
+/* Code Example 6 */
+.code-ex6 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 200px;
+}
+
+/* Code Example 7 */
+.code-ex7 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.code-ex7 p {
+  color: var(--code-result-border);
+}
+
+/* Code Example 8 */
+.code-ex8 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 100px;
+}
+
+.code-ex8 .box1 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.code-ex8 .box2 {
+  grid-column-start: 1;
+  grid-row-start: 3;
+  grid-row-end: 5;
+}
+
+/* Code Example 9 */
+.code-ex9 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 10px;
+  row-gap: 1em;
+}
+
+/* Code Example 10 */
+.code-ex10 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.code-ex10 .box1 {
+  grid-column: 1 / 4;
+}
+
+.code-ex10 .nested {
+  border: 2px solid var(--code-result-border);
+  border-radius: 5px;
+  background-color: var(--code-block-color);
+  padding: 1em;
+}
+
+/* Code Example 11 */
+.code-ex11 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 100px;
+}
+
+.code-ex11 .box1 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.code-ex11 .box2 {
+  grid-column-start: 1;
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+
+/* Code Example 12 */
+
+.code-ex12 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 100px;
+}
+
+.code-ex12 .box1 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  z-index: 2;
+}
+
+.code-ex12 .box2 {
+  grid-column-start: 1;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  z-index: 1;
+}
+
+/*********************** Reference Styling ********************/
+
+#Reference a {
+  color: var(--nav-highlight-color);
+}
+
+#Reference a:hover {
+  text-decoration: underline;
+}
+
+/********************************** Mobile Device Styling ********************************/
+
+@media only screen and (max-width: 815px) {
+  #navbar {
+    border-bottom: 2px solid var(--nav-highlight-color);
+    position: absolute;
+    margin: 0;
+    max-height: 275px;
+    width: 100%;
+    z-index: 1;
+  }
+
+  #main-doc {
+    position: relative;
+    margin-left: 0px;
+    margin-top: 270px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #main-doc {
+    margin-left: -10px;
+  }
+
+  pre {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
