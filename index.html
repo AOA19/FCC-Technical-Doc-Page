@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS Grid Layout</title>
     <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500;600;700;800&family=Pavanam&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <nav id="navbar">
@@ -40,7 +48,7 @@
         </li>
         <li>
           <a href="#Layering_items_with_z-index" class="nav-link"
-            >Layering items with z-index</a
+            >Layering items with <span>z-index</span></a
           >
         </li>
         <li>
@@ -171,7 +179,7 @@
             </code>
           </pre>
           <!-- Code example result -->
-          <div class="wrapper">
+          <div class="wrapper code-ex1">
             <div>One</div>
             <div>Two</div>
             <div>Three</div>
@@ -255,7 +263,45 @@
             </code>
           </pre>
           <!-- Code example result -->
-          <div class="wrapper">
+          <div class="wrapper code-ex2">
+            <div>One</div>
+            <div>Two</div>
+            <div>Three</div>
+            <div>Four</div>
+            <div>Five</div>
+          </div>
+          <h3>The <span>fr</span> unit</h3>
+          <p>
+            Tracks can be defined using any length unit. Grid also introduces an
+            additional length unit to help us create flexible grid tracks. The
+            new <code class="inline-code">fr</code> unit represents a fraction
+            of the available space in the grid container. The next grid
+            definition would create three equal width tracks that grow and
+            shrink according to the available space.
+          </p>
+          <!-- HTML code example -->
+          <pre class="language-html">
+            <code>
+              &lt;div class="wrapper">
+                &lt;div>One&lt;/div>
+                &lt;div>Two&lt;/div>
+                &lt;div>Three&lt;/div>
+                &lt;div>Four&lt;/div>
+                &lt;div>Five&lt;/div>
+              &lt;/div>
+            </code>
+          </pre>
+          <!-- CSS code example -->
+          <pre class="language-css">
+            <code>
+              .wrapper {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+              }
+            </code>
+          </pre>
+          <!-- Code example result -->
+          <div class="wrapper code-ex3">
             <div>One</div>
             <div>Two</div>
             <div>Three</div>
@@ -291,7 +337,7 @@
             </code>
           </pre>
           <!-- Code example result -->
-          <div class="wrapper">
+          <div class="wrapper code-ex4">
             <div>One</div>
             <div>Two</div>
             <div>Three</div>
@@ -327,7 +373,7 @@
             </code>
           </pre>
           <!-- Code example result -->
-          <div class="wrapper">
+          <div class="wrapper code-ex5">
             <div>One</div>
             <div>Two</div>
             <div>Three</div>
@@ -427,7 +473,7 @@
                 &lt;div>Three&lt;/div>
                 &lt;div>Four&lt;/div>
                 &lt;div>Five&lt;/div>
-              &lt;div>
+              &lt;/div>
             </code>
           </pre>
           <!-- CSS code example -->
@@ -441,7 +487,7 @@
             </code>
           </pre>
           <!-- Code example result -->
-          <div class="wrapper">
+          <div class="wrapper code-ex6">
             <div>One</div>
             <div>Two</div>
             <div>Three</div>
@@ -482,7 +528,7 @@
           <pre class="language-html">
             <code>
               &lt;div class="wrapper">
-                &lt;>One&lt;/div>
+                &lt;div>One&lt;/div>
                 &lt;div>Two
                   &lt;p> I have some more content in.&lt;/p>
                   &lt;p> This makes me taller than 100 pixels.&lt;/p>
@@ -494,7 +540,7 @@
             </code>
           </pre>
           <!-- Code example result -->
-          <div class="wrapper">
+          <div class="wrapper code-ex7">
             <div>One</div>
             <div>
               Two
@@ -591,7 +637,7 @@
             </code>
           </pre>
           <!-- Code example result -->
-          <div class="wrapper">
+          <div class="wrapper code-ex8">
             <div class="box1">One</div>
             <div class="box2">Two</div>
             <div class="box3">Three</div>
@@ -675,7 +721,7 @@
           <p>
             <em>Gutters</em> and <em>alleys</em> between grid cells can be
             created using the <code class="inline-code">column-grid</code> and
-            <code class="inline-grid">row-gap</code> properties, or the
+            <code class="inline-code">row-gap</code> properties, or the
             shorthand <code class="inline-code">gap</code>. In the below
             example, I am creating a 10-pixel gap between columns and a
             <code class="inline-code">1em</code> gap between rows.
@@ -704,7 +750,7 @@
             </code>
           </pre>
           <!-- Code example result -->
-          <div class="wrapper">
+          <div class="wrapper code-ex9">
             <div>One</div>
             <div>Two</div>
             <div>Three</div>
@@ -792,7 +838,7 @@
             </code>
           </pre>
           <!-- Code example result -->
-          <div class="wrapper">
+          <div class="wrapper code-ex10">
             <div class="box box1">
               <div class="nested">a</div>
               <div class="nested">b</div>
@@ -842,14 +888,14 @@
 
       <!------------------------------------Layering items Section ------------------------------------->
       <section class="main-section" id="Layering_items_with_z-index">
-        <header>Layering items with z-index</header>
+        <header>Layering items with <span>z-index</span></header>
         <article>
           <p>
             Grid items can occupy the same cell, and in this case we can use the
             <code class="inline-code">z-index</code> property to control the
             order in which overlapping items stack.
           </p>
-          <h3>Overlapping without z-index</h3>
+          <h3>Overlapping without <span>z-index</span></h3>
           <p>
             If we return to our example with items positioned by line number, we
             can change this to make two items overlap.
@@ -890,7 +936,7 @@
             </code>
           </pre>
           <!-- Code example result -->
-          <div class="wrapper">
+          <div class="wrapper code-ex11">
             <div class="box box1">One</div>
             <div class="box box2">Two</div>
             <div class="box box3">Three</div>
@@ -937,7 +983,7 @@
             </code>
           </pre>
           <!-- Code example result -->
-          <div class="wrapper">
+          <div class="wrapper code-ex12">
             <div class="box box1">One</div>
             <div class="box box2">Two</div>
             <div class="box box3">Three</div>
@@ -952,9 +998,10 @@
         <header>Reference</header>
         <article>
           <p>
-            All documentation and pictures in this page ia taken from
+            All documentation and pictures in this page is taken from
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout"
+              target="_blank"
               >MDN</a
             >
           </p>
