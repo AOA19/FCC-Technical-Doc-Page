@@ -2,7 +2,7 @@
 
 FreeCodeCamp Technical Documentation Page Project
 
-This is my design to the [FreeCodeCamp Product Landing Page Project](https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-technical-documentation-page)
+This is my design to the [FreeCodeCamp Technical Documentation Project](https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-technical-documentation-page)
 
 ## Table of contents
 
